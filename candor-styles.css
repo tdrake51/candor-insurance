@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Candor Insurance Brokerage Inc — shared segment landing page styles
+   Navy / gold identity. Used by all six per-segment pages.
+   ========================================================================== */
+:root {
+  --navy: #1b3a6b;
+  --navy-deep: #14284a;
+  --gold: #d4a12a;
+  --gold-soft: #e9c766;
+  --ink: #222831;
+  --slate: #556170;
+  --paper: #ffffff;
+  --mist: #f4f6fa;
+  --line: #dde3ec;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* Header */
+header { background: var(--paper); border-bottom: 3px solid var(--gold); padding: 20px 0; }
+.brand { display: flex; align-items: center; gap: 16px; }
+.mark {
+  width: 50px; height: 50px; flex: none;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy) 50%, var(--gold) 50%, var(--gold) 100%);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; font-size: 28px; box-shadow: inset 0 0 0 6px rgba(255,255,255,.18);
+}
+.brand-text .name { font-size: 24px; font-weight: 800; color: var(--navy); letter-spacing: 1px; line-height: 1.1; }
+.brand-text .sub { font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
+
+/* Hero */
+.hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; padding: 58px 0 52px; }
+.hero .eyebrow-h { color: var(--gold-soft); font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+.hero h1 { font-size: 38px; line-height: 1.15; font-weight: 800; max-width: 800px; }
+.hero p.lead { margin-top: 18px; font-size: 18px; max-width: 680px; color: #d5deec; }
+.cta-row { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; }
+.btn {
+  display: inline-block; padding: 15px 30px; border-radius: 8px; font-weight: 700; font-size: 16px;
+  text-decoration: none; border: none; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-gold { background: var(--gold); color: var(--navy-deep); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212,161,42,.35); }
+.btn-ghost { border: 2px solid rgba(255,255,255,.5); color: #fff; }
+.btn-ghost:hover { border-color: #fff; }
+.btn-dark { background: var(--navy); color: #fff; }
+.btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(20,40,74,.3); }
+
+/* Generic section */
+section.block { padding: 54px 0; }
+.eyebrow { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+h2.title { font-size: 28px; color: var(--navy); font-weight: 800; }
+h2.title + p.sub { color: var(--slate); font-size: 17px; margin-top: 8px; max-width: 740px; }
+
+/* Two-column info (who it helps / common issues) */
+.two-col { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.info-card { background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 10px; padding: 26px; }
+.info-card h3 { font-size: 19px; color: var(--navy); margin-bottom: 14px; }
+.info-card ul { list-style: none; }
+.info-card li { padding: 7px 0 7px 26px; position: relative; color: var(--slate); font-size: 15px; border-bottom: 1px solid var(--line); }
+.info-card li:last-child { border-bottom: none; }
+.info-card li:before { content: ""; position: absolute; left: 4px; top: 15px; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; }
+
+/* Documents band */
+.docs { background: var(--navy); color: #fff; }
+.docs .eyebrow { color: var(--gold-soft); }
+.docs h2.title { color: #fff; }
+.doc-grid { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.doc {
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 8px;
+  padding: 15px 18px; font-size: 15px; color: #dbe4f2; display: flex; align-items: center; gap: 10px;
+}
+.doc .chk { color: var(--gold-soft); font-weight: 800; flex: none; }
+
+/* How it works */
+.steps { margin-top: 34px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+.step .num {
+  font-size: 15px; font-weight: 800; color: var(--navy-deep); background: var(--gold);
+  width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
+}
+.step h3 { font-size: 17px; color: var(--navy); margin-bottom: 6px; }
+.step p { color: var(--slate); font-size: 15px; }
+
+/* Form embed */
+.form-section { background: var(--mist); border-top: 1px solid var(--line); }
+.form-shell {
+  margin-top: 30px; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--gold);
+  border-radius: 12px; padding: 14px; max-width: 780px; box-shadow: 0 6px 24px rgba(20,40,74,.06);
+}
+.form-shell iframe { width: 100%; border: none; min-height: 900px; display: block; border-radius: 8px; }
+.form-fallback { padding: 30px; text-align: center; }
+.form-fallback p { color: var(--slate); margin-bottom: 18px; }
+
+/* CTA band */
+.cta-band { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%); padding: 46px 0; text-align: center; }
+.cta-band h2 { font-size: 26px; color: var(--navy-deep); font-weight: 800; }
+.cta-band p { color: var(--navy); margin-top: 8px; font-size: 17px; }
+.cta-band .btn-dark { margin-top: 22px; }
+
+/* Contact */
+.contact { background: var(--navy-deep); color: #fff; padding: 38px 0; }
+.contact-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+.contact h3 { font-size: 20px; margin-bottom: 6px; }
+.contact .lines { display: flex; flex-wrap: wrap; gap: 26px; font-size: 16px; }
+.contact a { color: var(--gold-soft); text-decoration: none; font-weight: 600; }
+
+/* Disclaimer + footer */
+.disclaimer { background: var(--mist); padding: 24px 0; border-top: 1px solid var(--line); }
+.disclaimer p { font-size: 13px; color: var(--slate); max-width: 900px; }
+.disclaimer strong { color: var(--navy); }
+footer { background: var(--paper); padding: 20px 0; text-align: center; color: var(--slate); font-size: 13px; }
+
+@media (max-width: 700px) {
+  .hero h1 { font-size: 29px; }
+  h2.title { font-size: 23px; }
+  .two-col { grid-template-columns: 1fr; }
+}
