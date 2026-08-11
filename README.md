@@ -16,9 +16,12 @@ no dependencies — plain HTML and CSS.
 | `temporary-displacement-housing.html` | Mid-term & displacement housing providers |
 | `supportive-recovery-housing.html` | Supportive & recovery housing operators |
 | `behavioral-health-human-services.html` | Behavioral health & human services agencies |
-| `candor-styles.css` | Shared stylesheet — **required** by all six pages |
+| `trucking-motor-carrier.html` | Owner-operators, fleets & for-hire carriers |
+| `contractors-workers-comp.html` | General contractors, subcontractors & trades |
+| `products-liability.html` | Manufacturers, importers, distributors & sellers |
+| `candor-styles.css` | Shared stylesheet — **required** by all nine pages |
 
-> All six pages link to `candor-styles.css`. Keep every file in the same
+> All nine pages link to `candor-styles.css`. Keep every file in the same
 > folder or the pages will load without styling.
 
 ---
@@ -51,7 +54,7 @@ submission lands in the linked responses spreadsheet already labeled by page.
 
 ## Publishing with GitHub Pages
 
-1. Push all seven files to the repository root.
+1. Push all eleven files to the repository root.
 2. **Settings → Pages**, set the source to the `main` branch, folder `/ (root)`, and Save.
 3. Wait a few minutes for the site to build.
 4. Pages are served over HTTPS at
