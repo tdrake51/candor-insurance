@@ -384,15 +384,14 @@ document.addEventListener('DOMContentLoaded', async function() {
   <script>
     (function () {
       var segmentPages = {
-        "Landlord Readiness": "landlord-insurance-readiness.html",
-        "Portfolio Review": "rental-portfolio-review.html",
-        "Fix-and-Rent": "fix-and-rent-investor.html",
-        "Displacement Housing": "temporary-displacement-housing.html",
-        "Recovery Housing": "supportive-recovery-housing.html",
-        "Behavioral Health": "behavioral-health-human-services.html"
+        "Landlord Readiness": { page: "landlord-insurance-readiness.html", campaign: "SRC-RE" },
+        "Portfolio Review": { page: "rental-portfolio-review.html", campaign: "SRC-RE" },
+        "Fix-and-Rent": { page: "fix-and-rent-investor.html", campaign: "SRC-RE" },
+        "Displacement Housing": { page: "temporary-displacement-housing.html", campaign: "SRC-SPEC" },
+        "Recovery Housing": { page: "supportive-recovery-housing.html", campaign: "SRC-HC" },
+        "Behavioral Health": { page: "behavioral-health-human-services.html", campaign: "SRC-HC" }
       };
-      var fromFlyerDirectory = /\/flyer\/(?:index\.html)?$/.test(window.location.pathname);
-
+      var fromFlyerDirectory = /\/flyer(?:\/(?:index\.html)?)?$/.test(window.location.pathname);
       window.addEventListener("click", function (event) {
         var button = event.target.closest("button");
         if (!button) return;
@@ -402,7 +401,12 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         event.preventDefault();
         event.stopImmediatePropagation();
-        window.location.assign(new URL((fromFlyerDirectory ? "../" : "") + page, window.location.href).href);
+        var target = new URL((fromFlyerDirectory ? "../" : "") + page.page, window.location.href);
+        var params = new URLSearchParams(window.location.search);
+        params.set("utm_campaign", page.campaign);
+        target.search = params.toString();
+        target.hash = window.location.hash;
+        window.location.assign(target.href);
       }, true);
     }());
   </script>
