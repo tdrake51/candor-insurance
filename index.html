@@ -18,6 +18,17 @@
   .seg-card p { color: var(--slate); font-size: 15px; margin-bottom: 14px; }
   .seg-card .go { color: var(--gold); font-weight: 700; font-size: 14px; letter-spacing: .5px; }
   .seg-card:hover .go { color: var(--navy); }
+  .home-nav { margin-left: auto; }
+  .home-nav a { color: var(--navy); font-weight: 700; text-decoration: none; }
+  .home-nav a:hover, .home-nav a:focus-visible { color: var(--gold); text-decoration: underline; }
+  .featured-post { background: var(--mist); border-bottom: 1px solid var(--line); }
+  .featured-card { margin-top: 26px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--gold); border-radius: 10px; padding: 30px; }
+  .featured-card h3 { color: var(--navy); font-size: 24px; line-height: 1.25; margin-bottom: 10px; }
+  .featured-card p { color: var(--slate); max-width: 740px; }
+  .featured-card .cta-row { margin-top: 20px; }
+  @media (max-width: 700px) {
+    .home-nav { margin-left: 0; width: 100%; }
+  }
 </style>
 </head>
 <body>
@@ -29,6 +40,7 @@
       <div class="name">CANDOR</div>
       <div class="sub">Insurance Brokerage Inc</div>
     </div>
+    <nav class="home-nav" aria-label="Main navigation"><a href="blog.html">Blog</a></nav>
   </div>
 </header>
 
@@ -40,6 +52,20 @@
     <div class="cta-row">
       <a class="btn btn-gold" href="#segments">Find Your Program</a>
       <a class="btn btn-ghost" id="emailBtn" href="#">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="block featured-post" aria-labelledby="featured-post-title">
+  <div class="wrap">
+    <div class="eyebrow">Featured from the Blog</div>
+    <div class="featured-card">
+      <h2 class="title" id="featured-post-title">New York landlord insurance renewal checklist</h2>
+      <p>Gather the property details, policy documents, and renewal information a licensed insurance professional may need before your next renewal.</p>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="ny-landlord-insurance-renewal-checklist.html">Read the checklist</a>
+        <a class="btn btn-dark" href="blog.html">Browse the blog</a>
+      </div>
     </div>
   </div>
 </section>
